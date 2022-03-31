@@ -100,7 +100,7 @@
 
 % Environment definition
 \newenvironment{workscited}%
-{ \newpage  { \centering Works Cited \par } }%
+{ \newpage { \centering Works Cited \par } }%
 { \newpage }
 
 % Command to format each entry
