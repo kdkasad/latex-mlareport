@@ -46,16 +46,16 @@
 % Author command
 \renewcommand{\author}[2]{\renewcommand{\@authorfirst}{#1}%
 	\renewcommand{\@authorlast}{#2}}
-\newcommand{\@authorfirst}{\ClassError{No \noexpand\author given}}
-\newcommand{\@authorlast}{\ClassError{No \noexpand\author given}}
+\newcommand{\@authorfirst}{\ClassError{No \noexpand\author{} given}}
+\newcommand{\@authorlast}{\ClassError{No \noexpand\author{} given}}
 
 % Instructor command
 \newcommand{\instructor}[1]{\renewcommand{\@instructor}{#1}}
-\newcommand{\@instructor}{\ClassError{No \noexpand\instructor given}}
+\newcommand{\@instructor}{\ClassError{No \noexpand\instructor{} given}}
 
 % Course command
 \newcommand{\course}[1]{\renewcommand{\@course}{#1}}
-\newcommand{\@course}{\ClassError{No \noexpand\course given}}
+\newcommand{\@course}{\ClassError{No \noexpand\course{} given}}
 
 % Define \makeheading command
 \newcommand{\makeheading}%
