@@ -108,6 +108,7 @@
 % Place the text 1 inch from the top of the page. \headsep is the distance from
 % the bottom of the header to the body. So the distance from the top of the
 % page to the body is 1in + \voffset + \topmargin + \headheight + \headsep.
+\setlength{\headheight}{15pt}
 \setlength{\headsep}{0.5in - \headheight}
 
 %
