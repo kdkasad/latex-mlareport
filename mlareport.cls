@@ -2,7 +2,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{mlareport}[2022/03/30 MLA Report]
+\ProvidesClass{mlareport}[2022/04/26 MLA Report]
 
 %
 % Load base article class
