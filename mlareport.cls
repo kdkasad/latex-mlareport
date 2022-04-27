@@ -5,12 +5,6 @@
 \ProvidesClass{mlareport}[2022/03/30 MLA Report]
 
 %
-% Format URLs with no change in text style
-%
-\RequirePackage{url}
-\urlstyle{same}
-
-%
 % Load base article class
 %
 \LoadClass[12pt,letterpaper]{article}
@@ -37,6 +31,13 @@
 \RequirePackage{setspace}
 \doublespacing
 \frenchspacing
+
+%
+% URL support
+%
+\RequirePackage[hidelinks]{hyperref}
+\urlstyle{same}
+\renewcommand{\url}[1]{\href{https://#1}{\nolinkurl{#1}}}
 
 %
 % Create first page heading and title
