@@ -136,3 +136,26 @@
         {\textcolor{red}{(citation needed)}}%
         {(citation needed)}%
 }
+
+%
+% Labeled footnotes
+%
+\newcommand{\fntext}[2]{%
+	\expandafter\newcommand \csname fntext:#1 \endcsname {#2}%
+}
+\newcommand{\fn}[1]{%
+	\footnote{\csname fntext:#1 \endcsname}%
+}
+
+%
+% Footnote formatting:
+%  - give footnotes a hanging indent instead of a first-line indent
+%  - put space between the footnote mark and text
+%
+\newlength{\fnhangindent}
+\renewcommand\@makefntext[1]{%
+    \raggedright%
+    \noindent%
+    \settowidth{\fnhangindent}{\@makefnmark\ }%
+    \hangindent \fnhangindent%
+    \@makefnmark\ #1}
