@@ -138,6 +138,13 @@
 }
 
 %
+% Notes page
+%
+\newenvironment{notes}%
+    { \newpage \centering Notes \par \begin{enumerate} \centering }%
+    { \end{enumerate} \newpage }
+
+%
 % Labeled footnotes
 %
 \newcommand{\fntext}[2]{%
