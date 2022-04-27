@@ -122,3 +122,17 @@
 
 % Command to format each entry
 \newcommand{\wcentry}{\noindent \hangindent 40pt}
+
+% Missing citation warning.
+% Will use red if the 'colorx' package is loaded.
+\RequirePackage{ifthen}
+\AtBeginDocument{%
+    \@ifpackageloaded{xcolor}%
+        {\newcommand{\@havecolors}{1}}%
+        {\newcommand{\@havecolors}{0}}
+}
+\newcommand{\needcite}{%
+    \ifthenelse{\@havecolors = 1}%
+        {\textcolor{red}{(citation needed)}}%
+        {(citation needed)}%
+}
