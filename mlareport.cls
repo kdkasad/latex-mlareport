@@ -37,15 +37,22 @@
 %
 \RequirePackage[hidelinks]{hyperref}
 \urlstyle{same}
+\hypersetup{pdfduplex=Simplex}
 \renewcommand{\url}[1]{\href{https://#1}{\nolinkurl{#1}}}
 
 %
 % Create first page heading and title
 %
 
+% Title command
+\renewcommand{\title}[1]{\renewcommand{\@title}{#1}%
+	\hypersetup{pdftitle={\@title}}}
+\renewcommand{\@title}{\ClassError{No \noexpand\title{} given}}
+
 % Author command
 \renewcommand{\author}[2]{\renewcommand{\@authorfirst}{#1}%
-	\renewcommand{\@authorlast}{#2}}
+	\renewcommand{\@authorlast}{#2}%
+	\hypersetup{pdfauthor={\@authorfirst{} \@authorlast{}}}}
 \newcommand{\@authorfirst}{\ClassError{No \noexpand\author{} given}}
 \newcommand{\@authorlast}{\ClassError{No \noexpand\author{} given}}
 
@@ -56,6 +63,9 @@
 % Course command
 \newcommand{\course}[1]{\renewcommand{\@course}{#1}}
 \newcommand{\@course}{\ClassError{No \noexpand\course{} given}}
+
+% Subject command
+\newcommand{\subject}[1]{\hypersetup{pdfsubject={#1}}}
 
 % Define \makeheading command
 \newcommand{\makeheading}%
