@@ -33,6 +33,10 @@
 \doublespacing
 \frenchspacing
 
+% Spacing before/after lists
+\RequirePackage{enumitem}
+\setlist{nosep}
+
 %
 % URL support
 %
