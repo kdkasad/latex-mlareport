@@ -27,6 +27,7 @@
 %
 % Set spacing options
 %
+\raggedright
 \setlength{\parindent}{0.5in}
 \RequirePackage{setspace}
 \doublespacing
