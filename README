@@ -1,0 +1,8 @@
+"mlareport" Document Class for LaTeX
+====================================
+
+Provides formatting for MLA-style reports.
+
+See 'example.tex' for an example document. I'm too lazy to write
+documentation. It's not a complicated document class though, so the
+example is plenty sufficient.
