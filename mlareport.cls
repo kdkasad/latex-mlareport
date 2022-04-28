@@ -2,7 +2,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{mlareport}[2022/04/26 MLA Report]
+\ProvidesClass{mlareport}[2022/04/27 MLA Report]
 
 %
 % Load base article class
@@ -117,7 +117,7 @@
 
 % Environment definition
 \newenvironment{workscited}%
-{ \newpage { \centering Works Cited \par } }%
+{ \newpage  { \centering Works Cited \par } }%
 { \newpage }
 
 % Command to format each entry
@@ -127,22 +127,22 @@
 % Will use red if the 'colorx' package is loaded.
 \RequirePackage{ifthen}
 \AtBeginDocument{%
-    \@ifpackageloaded{xcolor}%
-        {\newcommand{\@havecolors}{1}}%
-        {\newcommand{\@havecolors}{0}}
+	\@ifpackageloaded{xcolor}%
+		{\newcommand{\@havecolors}{1}}%
+		{\newcommand{\@havecolors}{0}}
 }
 \newcommand{\needcite}{%
-    \ifthenelse{\@havecolors = 1}%
-        {\textcolor{red}{(citation needed)}}%
-        {(citation needed)}%
+	\ifthenelse{\@havecolors = 1}%
+		{\textcolor{red}{(citation needed)}}%
+		{(citation needed)}%
 }
 
 %
 % Notes page
 %
 \newenvironment{notes}%
-    { \newpage \centering Notes \par \begin{enumerate} \centering }%
-    { \end{enumerate} \newpage }
+	{ \newpage \centering Notes \par \begin{enumerate} \centering }%
+	{ \end{enumerate} \newpage }
 
 %
 % Labeled footnotes
@@ -161,8 +161,10 @@
 %
 \newlength{\fnhangindent}
 \renewcommand\@makefntext[1]{%
-    \raggedright%
-    \noindent%
-    \settowidth{\fnhangindent}{\@makefnmark\ }%
-    \hangindent \fnhangindent%
-    \@makefnmark\ #1}
+	\raggedright%
+	\noindent%
+	\settowidth{\fnhangindent}{\@makefnmark\ }%
+	\hangindent \fnhangindent%
+	\@makefnmark\ #1}
+
+% vim: ft=tex ts=4 sw=4 noet
