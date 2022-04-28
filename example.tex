@@ -1,0 +1,71 @@
+\documentclass{mlareport}
+
+% For colored 'citation needed' warnings. Recommended but not required.
+\usepackage{xcolor}
+
+% For filler text. Not required.
+\usepackage{lipsum}
+
+\title{Example Document for the ``\texttt{mlareport}'' Document Class}
+\author{Kian}{Kasad}
+\instructor{Prof. Professor}
+\course{\LaTeX{} 101}
+\date{27 Apr. 2022}
+
+\subject{A subject that will only appear in the PDF metadata,
+	not on the typeset document}
+
+\begin{document}
+
+\makeheading
+\maketitle
+
+% Filler text. Not required.
+\lipsum[1-3]
+
+% Footnote text definition. The label "fn disclaim" is given in order to
+% reference this later for inclusion in the text. This way, the footnote
+% doesn't interrupt the paragraph and you don't rely on footnote numbers
+% that could change later.
+\fntext{fn disclaim}{
+	Footnote text must be defined using
+	\texttt{\backslash fntext}
+	before placing the footnote in
+	the document text using
+	\texttt{\backslash fn}.
+}
+
+This is a very short paragraph to display the labeled footnotes
+functionality.\fn{fn disclaim} This sentence contains a fact that is not
+cited yet \needcite.
+
+% Filler text. Not required.
+\lipsum[4-7]
+
+% Used to create the 'Works Cited' page
+\begin{workscited}
+
+% Use '\wcentry' to start a new source listing
+\wcentry
+	Wikipedia contributors.
+	``LaTeX.''
+	\textit{Wikipedia, The Free Encyclopedia}.
+	Wikipedia, The Free Encyclopedia,
+	26 Apr. 2022.
+	\url{en.wikipedia.org/w/index.php?title=LaTeX&oldid=1084788103}.
+	Accessed 28 Apr. 2022.
+
+\wcentry
+	Wikipedia contributors.
+	``TeX Live.''
+	\textit{Wikipedia, The Free Encyclopedia}.
+	Wikipedia, The Free Encyclopedia,
+	11 Apr. 2022.
+	\url{en.wikipedia.org/w/index.php?title=TeX_Live&oldid=1082115315}.
+	Accessed 28 Apr. 2022.
+
+\end{workscited}
+
+\end{document}
+
+% vim: ft=tex ts=4 sw=4 noet tw=72
