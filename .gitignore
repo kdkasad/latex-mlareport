@@ -1,1 +1,7 @@
-test.*
+example.aux
+example.fdb_latexmk
+example.fls
+example.log
+example.out
+example.pdf
+example.xdv
